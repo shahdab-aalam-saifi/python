@@ -56,6 +56,8 @@ Style Guide: https://www.python.org/dev/peps/pep-0008/
 - print
 - input
 - bin
+- iter
+- next
 
 > **Object introspection**: Introspection is the ability to determine the type of an object at run-time.
 
@@ -68,3 +70,72 @@ Style Guide: https://www.python.org/dev/peps/pep-0008/
 
 - List of squares: `[num * num for num in range(1, 11)]`
 - List of squares of even numbers: `[num * num for num in range(1, 11) if num % 2 == 0]`
+
+### Sets
+
+- Ways to create sets: `({})` and `{}`
+- Functions: `add`, `discard`
+- `|` - Union
+- `&` - Intersection
+- `-` - Minus
+
+## Functions
+
+### Syntax
+
+```python
+def func_name(param_name="default_value"):
+    # perform action
+    return
+```
+
+> Add two blank lines after defining a function
+
+> `pass` is used to pass/return the control to calling function or if no action is require to be done by function
+
+> `param=default_value` to define optional parameter with default value
+
+> To pass arguments in any sequence use keyword parameters. e.g. `fun_name(param_name=value)` 
+
+## Lamda (Anonymous function)
+
+### Syntax
+
+```python
+lambda param: # expression
+```
+
+### Example
+
+```python
+lambda x,y: x + y
+```
+
+## Map
+It maps the function to every object of the iterable.
+
+### Syntax
+
+```python
+map(function, iterable)
+```
+
+### Example
+
+```python
+map(lambda x: x*x, [x for x in range(10, 20)])
+```
+
+## Module
+
+Define functions in a file and use in other files as logical group
+
+- math
+- sys
+
+## File IO
+
+```python
+with open(file_name, mode) as handle:
+    # processing
+```
