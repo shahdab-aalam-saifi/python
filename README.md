@@ -102,7 +102,7 @@ def func_name(param_name="default_value"):
 ### Syntax
 
 ```python
-lambda param: # expression
+lambda param: () # expression 
 ```
 
 ### Example
@@ -117,7 +117,7 @@ It maps the function to every object of the iterable.
 ### Syntax
 
 ```python
-map(function, iterable)
+map("<function>", "<iterable>")
 ```
 
 ### Example
@@ -136,6 +136,78 @@ Define functions in a file and use in other files as logical group
 ## File IO
 
 ```python
-with open(file_name, mode) as handle:
+with open("<file_name>", "<mode>") as handle:
     # processing
+    pass
 ```
+
+## Exception
+
+It is an event raise when an abnormal condition in a program resulting in the disruption in the flow of the program.
+
+### Example
+
+```python
+try:
+    # code
+    pass
+except IOError as err:
+    # failure
+    pass
+else:
+    # success
+    pass
+finally:
+    # final block
+    pass
+```
+
+## OOP
+
+- `__init__`: initialize to variable or constructor
+- `__str__`: use to define string representation on object
+- `self`: current object
+- `@static`: static property
+- `@classmethod`: static method 
+
+## Regular Expression
+
+- `^` - start
+- `$` - end
+- `.` - single character
+- `[]` - class
+- `match` - match if string starts with pattern
+- `search` - find anywhere
+- `findall` - search all
+- `split` - split
+- `sub` - substitute
+- `compile` - compile regular expression
+- `r'pattern'`
+
+## Generator
+
+- `yield`
+
+## Closure (Nested function)
+
+## Decorators
+
+- `@decorater_method`
+
+## Filter
+
+## Reduce
+
+```python
+from functools import reduce
+```
+## Frozenset
+
+## Copy
+
+```python
+import copy
+```
+
+- `copy.copy()` - Shallow copy
+- `copy.deepcopy()` - Deep copy

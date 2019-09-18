@@ -257,3 +257,173 @@
 # print("Done")
 # workbook.close()
 
+# try:
+#     fh = open("abc.txt", "r")
+#     fh.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+# except IOError as err:
+#     print("Error: ", err)
+# else:
+#     print("Success")
+# finally:
+#     print("Final")
+#
+# class EvenException(Exception):
+#     def __init__(self):
+#         self.message = "EvenException: number % 2 == 0"
+#
+#
+# class OddException(Exception):
+#     def __init__(self):
+#         self.message = "OddException: number % 2 != 0"
+#
+
+# try:
+#     num = int(input("Enter a number: "))
+#     if num % 2 == 0:
+#         raise EvenException
+#     else:
+#         raise OddException
+# except EvenException as err:
+#     print("Error: ", err.message)
+# except OddException as err:
+#     print("Error:", err.message)
+
+# class MyClass:
+#     x = 10
+
+# o = MyClass()
+# print(o.x)
+
+# class Person:
+#     def set_name(self, name):
+#         self._name = name
+#
+#     def set_age(self, age):
+#         self._age = age
+#
+#     def __init__(self, name, age):
+#         self._name = name
+#         self._age = age
+#
+#     def __str__(self):
+#         return "Name: {} Age: {}".format(self._name, self._age)
+#
+#
+# p = Person("Shahdab", 23)
+# p.set_name("Shahdab Aalam Saifi")
+# print(p)
+
+# class Animal:
+#     def eat(self):
+#         print("Eating...")
+#
+#
+# class Dog(Animal):
+#
+#     def bark(self):
+#         print("Barking...")
+#
+#     def eat(self):
+#         print("Eating meat...")
+#
+#
+# d = Dog()
+# d.bark()
+# d.eat()
+#
+# import re
+# import print_module as m
+#
+# name = "Shahdab Aalam Saifi"
+#
+# if re.match("Shadab", name):
+#     print("Matched")
+# else:
+#     print("Not matched")
+#
+# file_name = m.save_employee_details()
+#
+# name = input("Enter a name: ")
+#
+# with open(file_name, "r") as h:
+#     found = False
+#     for row in h:
+#         if re.match(name, row):
+#         if re.search(name, row):
+#             found = True
+#             print(row, end="")
+#         print(re.findall(name, row))
+#
+#     if not found:
+#         print("Nothing found :(")
+#
+# import re
+#
+# p = re.compile("ab*", re.IGNORECASE)
+# print(p.match("Abc"))
+# print(p.match("abc"))
+#
+# import print_module as m
+#
+# file_name = m.save_employee_details()
+#
+# with open(file_name, "r") as h:
+#     for row, employee in enumerate(h, 1):
+#         print(row, employee, end="")
+#
+#
+#
+# def squares(num):
+#     for x in range(1, num):
+#         yield x ** 2
+#
+#
+# print(list(squares(15)))
+
+# def out():
+#     print("Out")
+#
+#     def _in():
+#         print("In")
+#     _in()
+#
+#
+# out()
+#
+# def out():
+#     def _in():
+#         return "_inx"
+#     return _in
+#
+# a = out()
+# print(a())
+# print(out())
+# print(type(out()))
+# print(hasattr(out(), "__call__"))
+#
+#
+# def to_upper(func):
+#     def inner():
+#         return func().upper()
+#     return inner
+#
+#
+# def split(func):
+#     def inner():
+#         return func().split()
+#     return inner
+#
+# @split
+# @to_upper
+# def func():
+#     return "Shahdab Aalam Saifi"
+#
+# print(func())
+# flt = list(filter(lambda x: x % 2 == 0, [x for x in range(10)]))
+# mp = list(map(lambda x: x % 2 == 0, [x for x in range(10)]))
+# print(flt, mp)
+#
+# import glob
+#
+# files = glob.glob("C:\**\*")
+# print(files)
